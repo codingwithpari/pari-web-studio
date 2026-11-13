@@ -1,0 +1,405 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0b0b18;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: #101020;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #25253d;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.logo span,
+h1 span,
+h2 span {
+  color: #a78bfa;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #a78bfa;
+}
+
+#themeBtn {
+  background: #252540;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.hero {
+  min-height: 600px;
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  max-width: 570px;
+}
+
+.tag {
+  color: #a78bfa;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.description {
+  color: #aaaabe;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.main-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  padding: 15px 28px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.main-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px #7c3aed55;
+}
+
+.hero-card {
+  width: 350px;
+  max-width: 100%;
+  padding: 45px 30px;
+  border: 1px solid #38305b;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #211b39, #111124);
+  box-shadow: 0 20px 60px #00000055;
+}
+
+.code-icon {
+  font-size: 65px;
+  color: #a78bfa;
+  margin-bottom: 25px;
+}
+
+.hero-card h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.hero-card p {
+  color: #aaa;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.about,
+.projects,
+.contact {
+  padding: 90px 8%;
+  text-align: center;
+}
+
+.about {
+  background: #111121;
+}
+
+.about h2,
+.projects h2,
+.contact h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.about > p:last-child,
+.contact > p:not(.tag) {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #aaaabe;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 45px;
+}
+
+.project-card {
+  padding: 35px 25px;
+  background: #151527;
+  border: 1px solid #302b48;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #a78bfa;
+}
+
+.project-icon {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.project-card h3 {
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  color: #aaaabe;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.project-card a {
+  color: #b69bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact {
+  background: #111121;
+}
+
+.contact .main-btn {
+  margin-top: 25px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #080811;
+  color: #999;
+  line-height: 2;
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    padding: 18px 5%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  nav {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding: 70px 6%;
+  }
+
+  .about,
+  .projects,
+  .contact {
+    padding: 65px 6%;
+  }
+}
+
+/* Light theme */
+body.light {
+  background: #f5f3ff;
+  color: #201b32;
+}
+
+body.light .navbar,
+body.light .about,
+body.light .contact {
+  background: #e9e3ff;
+}
+
+body.light nav a,
+body.light .logo {
+  color: #30244a;
+}
+
+body.light .description,
+body.light .about > p:last-child,
+body.light .contact > p:not(.tag),
+body.light .project-card p {
+  color: #5e5570;
+}
+
+body.light .project-card {
+  background: #ffffff;
+}
+
+body.light footer {
+  background: #e9e3ff;
+  color: #51466b;
+}
+
+
+/* Professional animations */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-content,
+.hero-card {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.main-btn {
+  transition: all 0.3s ease;
+}
+
+
+.section-subtitle {
+  text-align: center;
+  opacity: 0.75;
+  margin-bottom: 30px;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.project-card {
+  padding: 25px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+}
+
+.project-card h3 {
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.project-card a {
+  color: #a78bfa;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.coming-soon {
+  color: #a78bfa;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.project-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+
+.contact-form {
+  max-width: 550px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #777;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  cursor: pointer;
+  border: none;
+}
